@@ -13,6 +13,6 @@ func (ud *userDomainService) CreateUser(userDomain model.UserDomainInterface) *r
 	logger.Info("Init CreateUser model", zap.String("journey", "createUser"))
 
 	userDomain.EncryptPassword()
-	fmt.Println(ud)
+	fmt.Println(userDomain.GetPassword())
 	return nil
 }
